@@ -1,0 +1,33 @@
+/* 16. * 표시는 모든 태그에 적용되는 것을 셋팅하는 것 */
+* {
+    color: aqua;
+}
+
+li{
+    color: pink;
+}
+
+#bts{
+    color: blueviolet;
+}
+
+.red{
+    width: 100px;
+    height: 100px;
+    background: yellowgreen;
+}
+
+button:hover{
+    color: red;
+    background-color: cyan;
+}
+
+a[href="https://www.daum.net"]{
+    color: rgb(113, 241, 21);
+}
+a[href^="https://www.goo"]{
+    color: orange;
+}
+a[href$="googledaum.net"]{
+    color: crimson;
+}

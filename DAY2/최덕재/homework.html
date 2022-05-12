@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- h1태그를 통해 제목을 설정
+        h1 > h2 > h3 > h4 > h5 순으로 글자크기 달라짐
+    -->
+    <header>
+        <hgroup>
+          <h1>이력서</h1>
+        </hgroup>
+    </header>
+    
+    <!-- 본문 -->
+    <section>
+        <!-- 이미지 추가를 위한 figure태그, src에 파일명, 너비와 높이 조절 가능 -->
+        <figure>
+            <img src="aabb.jpg" width="200" height="180">
+        </figure>
+
+        <!-- 본문의 내용부분 -->
+        <article class="post">
+
+            <!-- 
+                form 태그 : 입력받은 후 새로운 곳으로 넘어가기 위해 사용
+                label 태그 : input 태그를 설명하기 위해 사용
+                input 태그 : 안에 내용을 입력받기 위해 사용 / input의 name을 label의 for와 일치시켜준다
+                br 태그 : enter 역할 / 보기 편하게 하기 위해 사용
+            -->
+            <form action="" method="get">
+                <!-- 이름 넣는 칸, 필수 입력 -->
+                <label for="name">이름 : </label>
+                <input id="name" name="name" type="text" required>
+
+                <!-- 나이 넣는 칸 -->
+                <label for="age">나이 : </label>
+                <input id="age" name="age" type="text" required> <br><br>
+
+                <!-- 핸드폰 번호, 예시 미리 입력 -->
+                <label for="phoneNum">핸드폰주소 : </label>
+                <input name="phoneNum" type="text" placeholder="010-0000-0000" required> <br><br>
+
+                <!-- 이메일 입력, 이메일 양식 지키도록 -->
+                <label for="email">이메일 : </label>
+                <input id="email" name="email" type="email" required> <br><br>
+
+                <!-- 이메일 입력, 이메일 양식 지키도록 -->
+                <label for="git">깃 주소 : </label>
+                <input id="git" name="git" type="email" required> <br><br> 
+
+                <!-- 최종학력 입력 -->
+                <label for="edu">최종학력 : </label>
+                <input id="edu" name="edu" type="text" required> <br><br>
+            </form>
+            <!-- hr 태그 : 가로로 선 긋기 -->
+            <hr>
+            <section>
+                <h3> 경력 </h3>
+                <!--
+                    ul 태그 : 순서가 없는 목록을 만들어 준다 
+                            li와 함께사용
+                    li 태그 : 목록을 나타낸다
+                -->
+                <ul>
+                    <li>하나 항공 조종사 2년</li>
+                    <li>하나 해운 선박 해양사 3년 </li>
+                </ul>
+                <hr>
+                <h3>보유기술</h3>
+                <!-- 
+                    ol 태그 : 순서가 있는 목록을 만들어 준다 
+                    li 태그 : 목록을 나타낸다
+                 -->
+                <ol>
+                    <li>Java</li>
+                    <li>Linux</li>
+                    <li>DataBase</li>
+                    <li>Frontend</li>
+                </ol>
+                <hr>
+
+                <h3>자기소개</h3>
+                <div>
+                    안녕하세요. 잘 부탁 드립니다 <br>
+                    매사에 항상 열심히 하겠습니다. 
+                </div>
+                <hr>
+            </section>
+            
+            <br>
+            <!-- button : 전송을 위해 사용 -->
+            <button type="submit"> 제출하기 </button>
+          
+        </article>
+        
+    </section>
+</body>
+</html>

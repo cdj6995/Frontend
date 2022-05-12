@@ -1,0 +1,32 @@
+/* 홈페이지의 배경색(background), 폰트(font-family), 너비(width), 여백(margin, padding) 부여 */
+body {
+    background: #EEE;
+    font-family: arial, helvetica, sans-serif;
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* 헤더 부분의 배경색(background), 글자색(color), 여백(margin)부여 */
+  body > header {
+    margin-bottom: 10px;
+    background: #333;
+    color: #EEE;
+  }
+
+/* 텍스트를 중앙에 놓기 */
+  h1{
+      text-align: center;
+  }
+
+/* 사진을 왼쪽에 놓고 여백 주기 */
+  figure {
+    float: left;
+    margin: 0 10px 10px 10px;
+  }
+
+  /* 버튼에 마우스를 가져다 대면 색이 변하도록 설정 */
+  button:hover{
+    color: rgb(55, 0, 255);
+    background-color:bisque;
+}
