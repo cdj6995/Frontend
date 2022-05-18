@@ -20,6 +20,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     
     // id가 lottonum인 곳에 로또 번호 리스트를 입력한다.
-    let lotto = document.getElementById("lottonum");
-    lotto.innerHTML = lottonum;
+    let lotto = document.getElementById("num1");
+    lotto.innerHTML = lottonum[0];
+    let lotto2 = document.getElementById("num2");
+    lotto2.innerHTML = lottonum[1];
+    let lotto3 = document.getElementById("num3");
+    lotto3.innerHTML = lottonum[2];
+    let lotto4 = document.getElementById("num4");
+    lotto4.innerHTML = lottonum[3];
+    let lotto5 = document.getElementById("num5");
+    lotto5.innerHTML = lottonum[4];
+    let lotto6 = document.getElementById("num6");
+    lotto6.innerHTML = lottonum[5];
 })
