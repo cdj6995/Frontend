@@ -1,0 +1,73 @@
+/* 배경화면 설정 */
+body{
+    background-color: bisque;
+
+    display: flex;
+    /* 중앙으로 정렬 */
+    justify-content: center;
+    align-items: center;
+    /* 세로로 나열 */
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    margin: 30px 0 ;
+    font-size: 50px;
+}
+
+.addlist{
+    display: flex;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+
+    /* 리스트 앞에 점 없애주기 */
+    list-style: none;
+    background-color: rgba(240, 248, 255, 0.37);
+    width: 500px;
+    height: 50px;
+
+    border: 1px solid white;
+}
+
+
+li{
+    margin: 13px;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+i{
+    margin: 10px;
+    font-size: 23px;
+}
+
+.addbtn{
+    background-color: darkblue;
+    border-color: darkblue;
+    color: aliceblue;
+}
+.addbtn:hover{
+    background-color: cornflowerblue;
+}
+
+.clearall{
+    font-size: 15px;
+    font-weight: 650;
+    color: crimson;
+    margin: 10px;
+    padding: 10px 25px;
+}
+
+.textbtn{
+    background: none;
+    border: none;
+}
+
+.textbtn:hover{
+    background-color: aliceblue;
+}
