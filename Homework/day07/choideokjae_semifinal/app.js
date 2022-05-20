@@ -1,43 +1,43 @@
-// 할 일 목록
-let doList = [];
+// + 버튼 클릭시 적은 내용이 할 일으로 추가 되게 하기
+let cnt = 0;
+const clearbtn = document.getElementById("clear");
 
-// + 버튼 클릭시 addList 실행되도록 하자
-let addBtn = document.querySelector(".addbtn");
-addBtn.addEventListener("click", addList);
+clearbtn.addEventListener("click", clearall);
 
-// 할 일 추가하는 함수
-function addList() {
-    // input에 들어가 있는 문자를 list로 지정
-    let list = document.querySelector(".input").value;
-    // list가 공백이 아니면 실행
-    if(list != null){
-        // 실행 목록에 추가
-        doList.push(item);
-        // 추가한 후 다시 공백으로 만들어 준다
-        document.querySelector(".input").value="";
-        document.querySelector(".input").focus();
-    }
+document.querySelector(".addbtn").addEventListener("click", (e) => {
 
-    showList();
+
+    const div = document.createElement("div");
+    div.setAttribute("id","div"+cnt);
+    const li = document.createElement("li");
+    const todo = document.querySelector(".todo");
+    const input=document.querySelector(".input");
+
+    div.appendChild(li);
+    li.innerHTML = input.value;
+    div.innerHTML += `<button class="textbtn" onclick="deleteTodoList(` + cnt + `)"><i class="fa-solid fa-trash-can"></i></button>`;
+
+    todo.appendChild(div);
+
+    document.querySelector(".input").value="";
+    document.querySelector(".input").focus();
+    cnt++;
+});
+
+const ul = document.querySelector(".todo");
+
+// 리스트에서 휴지통 버튼 누르면 하나씩 삭제하기
+function deleteTodoList(cnt){
+    const div = document.getElementById("div" + cnt);
+    ul.removeChild(div);
+    cnt--;
 }
 
 
-function showList(){
-    let ul =`<ul class="todo">`;
-    for(let i = 0; i < doList.length; i++){
-        ul += `<div class="list"> <li class="listin" id = ` + i + `>` + doList[i] + `</li><button class="textbtn"><i class="fa-solid fa-trash-can"></i></button></div>`
+function clearall(){
+    for(let i = 0; i < cnt ; i++){
+        const div = document.getElementById("div" + i);
+        ul.removeChild(div);
     }
-    ul += "<ul>";
-    document.querySelector(".do_list").innerHTML = ul;
-
-    let deletebtn = document.querySelectorAll(".list");
-    for(let i = 0; i < deletebtn.length; i++){
-        deletebtn[i].addEventListener("click", deletedo);
-    }
-}
-
-function deletedo(){
-    let id = this.getAttribute("id");
-    doList.splice(id, 1);
-    showList();
+    cnt = 0;
 }

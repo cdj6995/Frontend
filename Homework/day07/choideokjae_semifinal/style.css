@@ -19,7 +19,8 @@ body{
 .addlist{
     display: flex;
 }
-.list{
+
+.todo div{
     display: flex;
     justify-content: space-between;
     align-items: center;
