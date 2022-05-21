@@ -10,17 +10,24 @@
 </head>
 <body>
     <h1 class="title">TO DO It!!</h1>
+
+    <!-- 주간모드, 야간모드를 변경할 수 있는 버튼-->
+    <input class="changebtn" type="button" value="night">
+    
+    <!-- 할 일을 입력받는 input과 입력받은 내용을 추가하기 위한 button -->
     <div class="addlist">
         <input class="input" type="text" placeholder="Type what you have to do">
-        <button class="addbtn" type="button">
+        <button class="addbtn">
             <i class="fa-solid fa-plus"></i>
         </button>
     </div>
+
+    <!-- 위에서 입력한 내용을 리스트에 추가 하기 위한 공간 -->
     <ul class="todo">
 
     </ul>
-    
 
+    <!-- 모든 리스트를 한번에 지우기 위한 clear 버튼 -->
     <div class="clear">
         <button id="clear" class="clearall">Clear All</button>
     </div>
