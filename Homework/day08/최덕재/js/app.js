@@ -69,37 +69,48 @@ function clearall(){
     cnt = 0;
 }
 
+// 리스트 내 글자 및 아이콘 색 바꾸기
+function listSetColor(color){
+    let lists = document.querySelectorAll("li");
+    let trash = document.querySelectorAll(".fa-trash-can");
+    let i = 0;
+    while(i<lists.length){
+        lists[i].style.color = color;
+        trash[i].style.color = color;
+        i++;
+    }
+}
+
+// Body 객체화 하기
+let Body = {
+    setColor : function(color){
+        document.querySelector("h1").style.color = color;
+    },
+    setBackGroundColor : function(color){
+        document.querySelector("body").style.backgroundColor = color;
+    }
+}
 
 // 주,야간 모드로 변경하기
 function changeMod(){
     if(changebtn.value === "night"){
         changebtn.value = "day";
         
-        body.style.backgroundColor = "black";
-        title.style.color = "bisque";
+        // 객체로 코드 간소화
+        Body.setBackGroundColor("black");
+        Body.setColor("bisque");
+        // title.style.color = "bisque";
         
-        let lists = document.querySelectorAll("li");
-        let trash = document.querySelectorAll(".fa-trash-can");
-        let i = 0;
-        while(i<lists.length){
-            lists[i].style.color = "bisque";
-            trash[i].style.color = "bisque";
-            i++;
-        }
+        // 함수로 코드 간소화
+        listSetColor("bisque");
 
     } else{
         changebtn.value = "night";
 
-        body.style.backgroundColor = "bisque";
-        title.style.color = "black";
+        Body.setBackGroundColor("bisque");
+        Body.setColor("black");
+        // title.style.color = "black";
         
-        let lists = document.querySelectorAll("li");
-        let trash = document.querySelectorAll(".fa-trash-can");
-        let i = 0;
-        while(i<lists.length){
-            lists[i].style.color = "black";
-            trash[i].style.color = "black";
-            i++;
-        }
+        listSetColor("black");
     }
 }
