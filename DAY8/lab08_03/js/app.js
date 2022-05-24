@@ -50,6 +50,7 @@ function showPrint(){
         permutation1("ABC");
     } catch (e) {
         console.log("배열이 아니네요 " + e);
+        // alert("배열이 아니네요 " + e);
     }
 }
 

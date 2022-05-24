@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 테스트</title>
+</head>
+<body>
+    <p>
+        <input type="text" id="message" size="60">
+        <button id="button">보내기</button>
+    </p>
+    <!-- 페이지가 2개인데 하나처럼 보여주게 하는 역할 -->
+    <iframe src="next.html" id="iframe" width="300px" height="200px" frameborder="1"></iframe>
+    <script>
+        // 데이터를 보낼 페이지 - iframe
+        const frameWindow = document.getElementById("iframe").contentWindow;
+        // 메시지 입력을 위해 전송 버튼의 요소를 가져온다.
+        const message = document.getElementById("message");
+        const button = document.getElementById("button");
+        // 메시지를 보내는 사이트의 출처
+        let targetOrigin = "/";
+        message.addEventListener("keydown", function(){
+            frameWindow.postMessage(message.value, targetOrigin);
+        })   // key를 치는 것을 keydown
+        //  e.keyCode === 13  => 이것은 enter 쳤을때 동작이 되도록 하는것!
+    </script>
+</body>
+</html>
