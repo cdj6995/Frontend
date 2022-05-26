@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR&display=swap');
+
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    /* background-color: ; */
+}
+
+
+header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bcbcbc;
+    text-align: center;
+}
+
+#total {
+    width: 450px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+    float: left;
+    border-right: 1px solid #bcbcbc;
+}
+
+#total #title {
+    text-align: center;
+    font-size: large;
+    color: darkmagenta;
+}
+
+img {
+    width: 150px;
+    padding-left: 30%;
+    margin-bottom: 10px;
+}
+
+#wallet {
+    text-align: center;
+    font-size: xx-large;
+    color: darkblue
+
+}
+
+#incomelist {
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+    font-size: larger;
+
+}
+
+#expenselist {
+    margin-right: 20%;
+    float: right;
+    text-align: center;
+    font-size: larger;
+
+}
+
+
+#tranList {
+    width: 580px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: left;
+    display: inline-block;
+    font-size: larger;
+}
+
+
+#add {
+    border:none;
+    border-radius:1rem;
+    padding: 1%;
+    width: 250px;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+    margin-left: 30%;
+}
+
+#inList {
+    float: left;
+}
+
+#outList {
+    float: right;
+}
+
+.modal-container {
+    background: rgba(0,0,0,.5);
+    display: none;
+    /* this is how we cover the entire page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-form #tranDate, #content, #price {
+    height: 3vh;
+}
+
+section .note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+section .form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.submit-btn
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+
+.close-btn {
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}

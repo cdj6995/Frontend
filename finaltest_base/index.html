@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 제목을 달기 위한 header -->
+    <header>
+        <h2>메뉴 검색</h2>
+    </header>
+    <!-- 메인 내용을 담기 위한 section -->
+    <section class="container">
+        <!-- 검색어 입력을 위한 form -->
+        <form >
+            <input type="text" placeholder="검색어를 입력하세요" autofocus>
+            <button class="btn-reset"></button>
+        </form>
+        <!-- 커피를 마실지 음료를 마실지 선택 -->
+        <div class="content">
+            <ul class="tabs" id="tabs">
+                <li class="coffee">커피 메뉴</li>
+                <li class="drink">음료 메뉴</li>
+            </ul>
+            
+            <!-- 커피 메뉴에 대한 리스트 -->
+            <ul class="active list" id="coffee">
+                <li>
+                    <span class="number">1</span>
+                    <span>에스프레소 4,000</span>
+                </li>
+                <li>
+                    <span class="number">2</span>
+                    <span>아메리카노 4,500</span>
+                </li>
+                <li>
+                    <span class="number">3</span>
+                    <span>라떼 5,000</span>
+                </li>
+                <li>
+                    <span class="number">4</span>
+                    <span>카푸치노 5,500</span>
+                </li>
+            </ul>
+
+            <!-- 음료 메뉴에 대한 리스트 -->
+            <ul class="list" id="drink">
+                <li>
+                    <span>에이드(레몬/망고/자몽)</span>
+                    <span class="price">2,000</span>
+                    <button class="btn-remove"></button>
+                </li>
+                <li>
+                    <span>청포도 플라워</span>
+                    <span class="price">2,500</span>
+                    <button class="btn-remove"></button>
+                </li>
+                <li>
+                    <span>블랜디드(망고/딸기/망고 바나나)</span>
+                    <span class="price">3,000</span>
+                    <button class="btn-remove"></button>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

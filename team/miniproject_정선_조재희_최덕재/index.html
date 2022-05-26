@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>너의 동반자</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <header>
+        <h1>너의 동반자</h1>
+    </header>
+        <section id="total">
+            <img src="image/wallet.png" alt="">
+            <div id="title">" 지난 1개월 간의 거래 내역을 확인해보세요! "</div>
+            <br>
+            <div id="wallet">
+                <div id="totalCom">
+                    ￦0
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div id="list1"> 
+                <div id="incomelist">
+                    <span>총 수입</span>
+                    <div id="totalIncome">
+                        0
+                    </div>
+                </div>
+                <div id="expenselist">
+                    <span>총 지출</span>
+                    <div id="totalExpense">
+                        0
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tranList">
+            <div>
+                <!-- 이 버튼 클릭시 거래 내역 입력 창 나옴 -->
+                <button id="add">새 거래 내역을 추가해주세요</button>  
+            </div>
+            <br>
+            <div class="flex-item" id="inList">
+                <span>수입 내역</span>
+                <ul id="in">
+                    
+                </ul>
+            </div>
+            <div class="flex-item" id="outList">
+                <span>지출 내역</span>
+                <ul id="out">
+                </ul>
+            </div>
+        </section>
+
+<!-- 모달창으로 만들어야 함 -->
+    <div class="modal-container" id="modal"> 
+        <section class="modal" id="inputList">
+            <div class="note">
+                <h3>거래 내역 입력</h3>
+            </div>
+            <div class="form-content">
+                <div class="modal-form">
+                    <div>
+                        <input type="radio" name="choice" id="income" value="income">
+                        <label for="income">수입</label>
+                        <input type="radio" name="choice" id="expense" value="expense">
+                        <label for="expense">지출</label>
+                    </div>
+                    <br>
+                    <label for="tranDate">날짜</label><br>
+                    <input type="date" name="tranDate" id="tranDate" >
+                    <br>
+                    <label for="content">내용</label><br>
+                    <input type="text" name="content" id="content" placeholder="내용을 입력하세요 (예:교재비)">
+                    <br>
+                    <label for="price">금액</label><br>
+                    <input type="text" name="price" id="price" placeholder="금액을 입력하세요 (예: 20000)">
+                    <br>
+                </div>
+                    <button class="submit-btn" id="tranInsert">입력하기</button>
+                    <button class="close-btn" id="exit">닫기</button>         
+            </div>
+        </section>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
